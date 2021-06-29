@@ -44,22 +44,5 @@ print(df.add(df2, fill_value=0))
 # b  0.686107  3.824246 -0.100780
 # c  1.390491  2.956737  2.454870
 # d       NaN  0.558688 -1.226343
-# Flexible comparisons
-# Series and DataFrame have the binary comparison methods eq, ne, lt, gt, le, and ge whose behavior is analogous to the binary arithmetic operations described above:
 
-print(df.gt(df2))
-# 
-#      one    two  three
-# a  False  False  False
-# b  False  False  False
-# c  False  False  False
-# d  False  False  False
 
-print(df2.ne(df)) 
-# 
-#      one    two  three
-# a  False  False   True
-# b  False  False  False
-# c  False  False  False
-# d   True  False  False
-# These operations produce a pandas object of the same type as the left-hand-side input that is of dtype bool. These boolean objects can be used in indexing operations, see the section on Boolean indexing.
