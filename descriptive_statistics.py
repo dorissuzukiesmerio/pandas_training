@@ -21,45 +21,81 @@ df2 = pd.DataFrame(
 )
 
 
+
 # >>>Function Description
 
 # Number of non-NA observations
 df.count("a"> "8")
 
-sum(df) # Sum of values
 
-mean(df) # Mean of values
+print(df.sum)
+print("\nSum of values")
 
-mad(df) # Mean absolute deviation
 
-median(df) # Arithmetic median of values
+print(mean)
+print("\nMean of values")
 
-min(df) # Minimum
 
-max(df)# Maximum
+print(mad)
+print("\nMean absolute deviation")
 
-mode(df) # Mode
 
-abs(df)# Absolute Value
+print(median)
+print("\nArithmetic median of values")
 
-prod(df) # Product of values
 
-std(df) # Bessel-corrected sample standard deviation
+print(min)
+print("\nMinimum")
 
-var(df)# Unbiased variance
 
-sem(df) # Standard error of the mean
+print(max(df))
+print("\nMaximum")
 
-skew(df) # Sample skewness (3rd moment)
 
-kurt# # Sample kurtosis (4th moment)
+print(mode)
+print("\nMode")
 
-quantile # # Sample quantile (value at %)
 
-# # cumsum # # Cumulative sum
+print(abs(df))
+print("\nAbsolute Value")
 
-# # cumprod # # Cumulative product
 
-# # cummax # # Cumulative maximum
+print(prod)
+print("\nProduct of values")
 
-# # cummin # # Cumulative minimum
+
+print(std)
+print("\nBessel-corrected sample standard deviation")
+
+
+print(var(df))
+print("\nUnbiased variance")
+
+
+print(sem)
+print("\nStandard error of the mean")
+
+
+print(skew)
+print("\nSample skewness (3rd moment)")
+
+print("\nSample kurtosis (4th moment")
+print(df.kurt)
+
+
+
+print(quantile )
+print("\nSample quantile (value at %)")
+
+
+print(cumsum )
+print(Cumulative sum)
+
+
+print(cumprod #Cumulative product)
+
+
+print(cummax #Cumulative maximum)
+
+
+print(cummin #Cumulative minimum)
