@@ -24,78 +24,63 @@ df2 = pd.DataFrame(
 
 # >>>Function Description
 
-# Number of non-NA observations
-df.count("a"> "8")
+print("\nNumber of non-NA observations")
+print(df.count("a"> "8"))
 
-
-print(df.sum)
 print("\nSum of values")
+print(df.sum)
 
-
-print(mean)
 print("\nMean of values")
+print(df.mean)
 
-
-print(mad)
 print("\nMean absolute deviation")
+print(df.mad)
 
-
-print(median)
 print("\nArithmetic median of values")
+print(df.median)
 
-
-print(min)
 print("\nMinimum")
+print(df.min)
 
-
-print(max(df))
 print("\nMaximum")
+print(df.max)
 
-
-print(mode)
 print("\nMode")
+print(df.mode)
 
-
-print(abs(df))
 print("\nAbsolute Value")
+print(df.abs)
 
-
-print(prod)
 print("\nProduct of values")
+print(df.prod)
 
-
-print(std)
 print("\nBessel-corrected sample standard deviation")
+print(df.std)
 
-
-print(var(df))
 print("\nUnbiased variance")
+print(df.var)
 
-
-print(sem)
 print("\nStandard error of the mean")
+print(df.sem)
 
-
-print(skew)
 print("\nSample skewness (3rd moment)")
+print(df.skew)
 
 print("\nSample kurtosis (4th moment")
 print(df.kurt)
 
 
-
-print(quantile )
 print("\nSample quantile (value at %)")
+print(df.quantile)
 
+print("\nCumulative sum")
+print(df.cumsum)
 
-print(cumsum )
-print(Cumulative sum)
+print("\nCumulative product")
+print(df.cumprod)
 
+print("\nCumulative maximun")
+print(df.cummax)
 
-print(cumprod #Cumulative product)
-
-
-print(cummax #Cumulative maximum)
-
-
-print(cummin #Cumulative minimum)
+print("\nCumulative minimun")
+print(df.cummin)
