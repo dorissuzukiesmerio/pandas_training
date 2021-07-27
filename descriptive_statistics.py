@@ -84,3 +84,54 @@ print(df.cummax())
 
 print("\nCumulative minimun")
 print(df.cummin())
+
+# Combining 
+
+#>> Descriptive statistics
+# There exists a large number of methods for computing descriptive statistics and other related operations on Series, DataFrame. 
+# Most of these are aggregations (hence producing a lower-dimensional result) like sum(), mean(), and quantile(), but some of them, like cumsum() and cumprod(), produce an object of the same size. Generally speaking, these methods take an axis argument, just like ndarray.{sum, std, …}, but the axis can be specified by name or integer:
+
+# Series: no axis argument needed
+
+# DataFrame: “index” (axis=0, default), “columns” (axis=1)
+
+# For example:
+
+print(df)
+# 
+#         one       two     three
+# a  1.394981  1.772517       NaN
+# b  0.343054  1.912123 -0.050390
+# c  0.695246  1.478369  1.227435
+# d       NaN  0.279344 -0.613172
+
+print(df.mean(0))
+# 
+# one      0.811094
+# two      1.360588
+# three    0.187958
+# dtype: float64
+
+print(df.mean(1))
+# 
+# a    1.583749
+# b    0.734929
+# c    1.133683
+# d   -0.166914
+# dtype: float64
+# All such methods have a skipna option signaling whether to exclude missing data (True by default):
+
+print(df.sum(0, skipna=False))
+# 
+# one           NaN
+# two      5.442353
+# three         NaN
+# dtype: float64
+
+print(df.sum(axis=1, skipna=True))
+# 
+# a    3.167498
+# b    2.204786
+# c    3.401050
+# d   -0.333828
+# dtype: float64
