@@ -21,8 +21,10 @@ df2 = pd.DataFrame(
 )
 
 
-
 # >>>Function Description
+
+# Quick reference summary table of common functions. 
+# Each also takes an optional level parameter which applies only if the object has a hierarchical index.
 
 print("\nNumber of non-NA observations")
 print(df.count("a"> "8")())
@@ -135,3 +137,35 @@ print(df.sum(axis=1, skipna=True))
 # c    3.401050
 # d   -0.333828
 # dtype: float64
+
+#Create your own:
+# Combined with the broadcasting / arithmetic behavior, one can describe various statistical procedures, 
+#like standardization (rendering data zero mean and standard deviation of 1), very concisely:
+
+ts_stand = (df - df.mean()) / df.std()
+
+print(ts_stand.std())
+# 
+# one      1.0
+# two      1.0
+# three    1.0
+# dtype: float64
+
+xs_stand = df.sub(df.mean(1), axis=0).div(df.std(1), axis=0)
+
+print(xs_stand.std(1))
+# 
+# a    1.0
+# b    1.0
+# c    1.0
+# d    1.0
+# dtype: float64
+# Note that methods like cumsum() and cumprod() preserve the location of NaN values. This is somewhat different from expanding() and rolling() since NaN behavior is furthermore dictated by a min_periods parameter.
+
+print(df.cumsum())
+# 
+#         one       two     three
+# a  1.394981  1.772517       NaN
+# b  1.738035  3.684640 -0.050390
+# c  2.433281  5.163008  1.177045
+# d       NaN  5.442353  0.563873
