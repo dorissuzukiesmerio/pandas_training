@@ -38,7 +38,6 @@ df = pd.DataFrame(
 
 for col in df:
      print(col)
- 
 # col1
 # col2
 # pandas objects also have the dict-like items() method to iterate over the (key, value) pairs.
@@ -87,10 +86,10 @@ print( df)
 
 # For example:
 
-for label, ser in df.items():)
+for label, ser in df.items():
     print(label)
     print(ser)
-#    .....: 
+
 # a
 # 0    1
 # 1    2
@@ -122,7 +121,7 @@ for row_index, row in df.iterrows():
 
 # Because iterrows() returns a Series for each row, it does not preserve dtypes across the rows (dtypes are preserved across columns for DataFrames). For example,
 
-print( df_orig = pd.DataFrame([[1, 1.5]], columns=["int", "float"]))
+df_orig = pd.DataFrame([[1, 1.5]], columns=["int", "float"])
 
 print( df_orig.dtypes)
  # 
@@ -130,7 +129,7 @@ print( df_orig.dtypes)
 # float    float64
 # dtype: object
 
-print( row = next(df_orig.iterrows())[1])
+row = next(df_orig.iterrows())[1]
 
 print( row)
  # 
@@ -148,22 +147,22 @@ print( df_orig["int"].dtype)
 
 # For instance, a contrived way to transpose the DataFrame would be:
 
-print( df2 = pd.DataFrame({"x": [1, 2, 3], "y": [4, 5, 6]}))
+df2 = pd.DataFrame({"x": [1, 2, 3], "y": [4, 5, 6]})
 
-print( print(df2))
+print(df2)
 #    x  y
 # 0  1  4
 # 1  2  5
 # 2  3  6
 
-print( print(df2.T))
+print(df2.T)
 #    0  1  2
 # x  1  2  3
 # y  4  5  6
 
-print( df2_t = pd.DataFrame({idx: values for idx, values in df2.iterrows()}))
+df2_t = pd.DataFrame({idx: values for idx, values in df2.iterrows()})
 
-print( print(df2_t))
+print(df2_t)
 #    0  1  2
 # x  1  2  3
 # y  4  5  6
@@ -172,9 +171,8 @@ print( print(df2_t))
 
 # For instance:
 
-print( for row in df.itertuples():)
-#    .....:     print(row)
-#    .....: 
+for row in df.itertuples():
+     print(row) 
 # Pandas(Index=0, a=1, b='a')
 # Pandas(Index=1, a=2, b='b')
 # Pandas(Index=2, a=3, b='c')
