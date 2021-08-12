@@ -4,14 +4,14 @@
 # By index
 # The Series.sort_index() and DataFrame.sort_index() methods are used to sort a pandas object by its index levels.
 
-print( df = pd.DataFrame()
-#    .....:     {
-#    .....:         "one": pd.Series(np.random.randn(3), index=["a", "b", "c"]),
-#    .....:         "two": pd.Series(np.random.randn(4), index=["a", "b", "c", "d"]),
-#    .....:         "three": pd.Series(np.random.randn(3), index=["b", "c", "d"]),
-#    .....:     }
-#    .....: )
-#    .....: 
+df = pd.DataFrame(
+    {
+        "one": pd.Series(np.random.randn(3), index=["a", "b", "c"]),
+        "two": pd.Series(np.random.randn(4), index=["a", "b", "c", "d"]),
+        "three": pd.Series(np.random.randn(3), index=["b", "c", "d"]),
+    }
+)
+
 
 print( unsorted_df = df.reindex()
 #    .....:     index=["a", "d", "c", "b"], columns=["three", "two", "one"]
