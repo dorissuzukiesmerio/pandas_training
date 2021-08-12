@@ -195,10 +195,10 @@ print( s.dt.components)
 # Vectorized string methods
 # Series is equipped with a set of string processing methods that make it easy to operate on each element of the array. Perhaps most importantly, these methods exclude missing/NA values automatically. These are accessed via the Series’s str attribute and generally have names matching the equivalent (scalar) built-in string methods. For example:
 
-print( s = pd.Series()
-#    .....:     ["A", "B", "C", "Aaba", "Baca", np.nan, "CABA", "dog", "cat"], dtype="string"
-#    .....: )
-#    .....: 
+s = pd.Series(
+    ["A", "B", "C", "Aaba", "Baca", np.nan, "CABA", "dog", "cat"], dtype="string"
+)
+
 
 print( s.str.lower())
  # 
